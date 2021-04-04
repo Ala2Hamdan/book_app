@@ -1,0 +1,15 @@
+* {
+ box-sizing:border-box;
+ 
+}
+body{
+    margin: auto;
+}
+div{
+
+    width: 500px;
+    height: 600px;
+}
+form{
+    display: inline;
+}

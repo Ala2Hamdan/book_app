@@ -1,15 +1,21 @@
+@import './reset.css';
+@import './layout.css';
+@import './modules.css';
+
 * {
  box-sizing:border-box;
- 
 }
 body{
     margin: auto;
+    background-color: darkgray;
 }
-div{
-
-    width: 500px;
-    height: 600px;
+header{
+    height: 300px;
+    background-color: rgb(12, 12, 12);
+    color: white;
 }
 form{
     display: inline;
+    width: 500px;
+    height: 600px;
 }

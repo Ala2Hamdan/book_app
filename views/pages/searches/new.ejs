@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/base.css">
     <title>Search Book</title>
 </head>
 
 <body>
+    <header>
+       <h1> Search by Title orAuthor</h1>
+    </header>
     <form action="/searches" method="post">
         <label for="search-name">
             Search Text:
@@ -17,11 +20,11 @@
         </label>
         <label for="search-by">
             Search By: author
-            <input type="radio" name="search-by" value="author" id="search-by-author">
+            <input type="radio" name="search" value="author" id="search-by-author">
         </label>
         Search By: title
         <label for="search-by-title">
-            <input type="radio" name="search-by" value="title" id="">
+            <input type="radio" name="search" value="title" id="">
         </label>
         <input type="submit" value="Search">
     </form>

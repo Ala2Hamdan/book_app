@@ -1,0 +1,26 @@
+@import './reset.css';
+@import './layout.css';
+@import './modules.css'; 
+
+*{
+ box-sizing:border-box;
+}
+body{
+    margin: auto;
+    margin:0 auto;
+    /* width: 480px; */
+    background-color: darkgray;
+}
+
+header{
+    height: 100px;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+
+   

@@ -30,24 +30,13 @@ app.get('*', (req, res) => { res.status(404).send('Page Not Found');
 });
 
 function errorFunction(err, req, res, next) {
-  if (res.headersSent) {
-    return next(err);
-  }
-  res.status(500);
-  res.render('pages/error', { error: err });
+  res.status(500).render('pages/error', { error: err });
 }
-
-
 
 function createSearch(req, res) {
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
-      // return (req.body['search'] === 'title')? url += `+intitle:${req.body['name']}`: url += `+inauthor:${req.body['name']}`;
-  if (req.body['search'] === 'title') {
-    url += `+intitle:${req.body['name']}`;
-  }
-  if (req.body['search'] === 'author') {
-    url += `+inauthor:${req.body['name']}`;
-  }
+  if (req.body['search'] === 'title') { url += `+intitle:${req.body['name']}`; }
+  if (req.body['search'] === 'author') {url += `+inauthor:${req.body['name']}`;}
   superagent.get(url).then(data => {
       return data.body.items.map(items => new Books(items));
     })
@@ -55,8 +44,8 @@ function createSearch(req, res) {
 }
 
 
-
 function Books(data) {
+  console.log(data);
   this.title = data.volumeInfo.title;
   this.author = data.volumeInfo.authors.join(', ');
   this.description = data.volumeInfo.description;

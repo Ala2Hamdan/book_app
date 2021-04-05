@@ -12,21 +12,25 @@
     <header>
        <h1> Search by Title orAuthor</h1>
     </header>
-    <form action="/searches" method="post">
-        <label for="search-name">
-            Search Text:
-            <input type="text" name="name" id="search-name">
-        </label>
-        <label for="search-by">
-            Search By: author
+    <main>
+        <div class="containar">
+          <form action="/searches" method="post">
+             <label for="search-name">
+                <span>Search Text:</span>
+               <input type="text" name="name" id="search-name">
+             </label><br>
+             <label for="search-by">
+             Author</label>
             <input type="radio" name="search" value="author" id="search-by-author">
-        </label>
-        Search By: title
-        <label for="search-by-title">
+             <br>
+            
+            <label for="search-by-title">Title</label>
             <input type="radio" name="search" value="title" id="">
-        </label>
+          <br>
         <input type="submit" value="Search">
     </form>
+    </div>
+</main>
 </body>
 
 </html>

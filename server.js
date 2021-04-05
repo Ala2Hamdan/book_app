@@ -32,7 +32,6 @@ app.get('*', (req, res) => { res.status(404).send('Page Not Found');
 function errorFunction(err, req, res, next) {
   res.status(500).render('pages/error', { error: err });
 }
-
 function createSearch(req, res) {
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
   if (req.body['search'] === 'title') { url += `+intitle:${req.body['name']}`; }

@@ -5,8 +5,20 @@
     <title>Book Collection</title>
   </head>
   <body>
+    <header>
+      <a href=""></a>
+    </header>
     <main>
       <h4>My Book Collection</h4>
+      <p>you have <%= num %> Books</p>
+      <% bookResult.forEach( (book,indx) => { %>
+        <div>
+            <img src=<%= book.image_url %> alt="">
+            <h2><a href="/books/<%= indx+1 %>"><%=book.title %></a></h2>
+            <h4><%=book.author %></h4>
+            <p><%=book.description %></p>
+        </div>
+    <% }) %>
     </main>
   </body>
 </html>
